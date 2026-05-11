@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasos & Estilo | Inicio</title>
-    <!-- Enlace a CSS Externo (Indicador 1.3.1) -->
+    <!-- Enlace a CSS Externo (Indicador Rúbrica) -->
     <link rel="stylesheet" href="estilos.css">
     <style>
-        /* CSS Interno (Indicador 1.3.1) */
+        /* CSS Interno para cumplir con la rúbrica */
         header { border-bottom: 4px solid #e74c3c; }
+        .hero-btns { margin-top: 25px; }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">PASOS & ESTILO</div>
         <nav>
+            <!-- Navegación conectada con tus otros archivos -->
             <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
+            <a href="hombre.html">Hombre</a>
+            <a href="mujer.html">Mujer</a>
             <a href="tallas.html">Tallas</a>
             <a href="contacto.html">Contacto</a>
         </nav>
@@ -26,7 +29,10 @@
         <div class="hero-content">
             <h1>TENDENCIAS 2026</h1>
             <p>Calzado de Tlalnepantla para el mundo.</p>
-            <a href="productos.html" class="btn-boton">VER CATÁLOGO</a>
+            <div class="hero-btns">
+                <!-- Botón principal conectado al Mapa del Sitio -->
+                <a href="mapa.html" class="btn-boton">VER MAPA DEL SITIO</a>
+            </div>
         </div>
     </section>
 
@@ -34,12 +40,25 @@
         <section class="info">
             <h2>Bienvenidos a la Innovación</h2>
             <p class="texto-especial">Explora nuestra nueva línea de calzado deportivo diseñada para el máximo rendimiento. En Pasos & Estilo fusionamos la herencia artesanal de México con la tecnología de marcas líderes como Nike para ofrecerte lo mejor en cada paso.</p>
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600" alt="Nike Red" class="img-promo">
+            
+            <div class="grid-productos">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400" alt="Calzado Hombre">
+                    <h3>Colección Hombre</h3>
+                    <a href="hombre.html" class="btn-enlace-estilo">Explorar Hombre</a>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=400" alt="Calzado Mujer">
+                    <h3>Colección Mujer</h3>
+                    <a href="mujer.html" class="btn-enlace-estilo">Explorar Mujer</a>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Pasos & Estilo | Diseño y Elaboración de Páginas Web</p>
+        <p><small>Tlalnepantla de Baz, Estado de México</small></p>
     </footer>
 </body>
 </html>
