@@ -1,0 +1,142 @@
+/* --- COMENTARIOS DE SINTAXIS (Requisito Rúbrica) --- */
+/* Estilos Generales y Tipografía */
+
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    /* Definición de tipografía (font-family, size, weight) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6; /* Appearance property */
+    color: #333;
+}
+
+/* --- TIPOGRAFÍA Y TEXTO --- */
+h1 {
+    font-variant: small-caps; /* Requisito Rúbrica */
+    letter-spacing: 2px;
+}
+
+.introduccion::first-letter {
+    /* Pseudo-elemento first-letter (Requisito Rúbrica) */
+    font-size: 300%;
+    font-weight: bold;
+    color: #e74c3c;
+    float: left;
+    margin-right: 8px;
+}
+
+/* --- ENLACES Y ESTADOS (Requisito Rúbrica) --- */
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+nav a:link { color: #ffffff; }
+nav a:visited { color: #cccccc; }
+nav a:hover { 
+    color: #e74c3c; 
+    text-decoration: underline; 
+}
+nav a:active { color: #f1c40f; }
+
+/* Enlaces con icono (Requisito Rúbrica) */
+.btn-mapa {
+    background: #e74c3c;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    /* Background image para icono (simulado con color sólido o URL real) */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/854/854878.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+/* --- LISTAS (Requisito Rúbrica) --- */
+.lista-calzado {
+    list-style-type: square; /* Tipo de viñeta */
+    list-style-image: url('https://cdn-icons-png.flaticon.com/512/2872/2872620.png'); /* Viñeta imagen */
+    list-style-position: inside;
+}
+
+/* --- TABLAS (Requisito Rúbrica) --- */
+.tabla-tallas {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Requisito border-collapse */
+    border-spacing: 0;
+    background: white;
+}
+
+.tabla-tallas th, .tabla-tallas td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Color a cada fila (filas alternas) */
+.tabla-tallas tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-tallas caption {
+    caption-side: bottom; /* Requisito caption-side */
+    padding: 10px;
+    font-style: italic;
+}
+
+/* --- FORMULARIOS (Requisito Rúbrica) --- */
+.formulario-seccion {
+    background: #222;
+    color: white;
+    padding: 40px;
+}
+
+.campo {
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para etiquetas e inputs */
+label { display: block; margin-bottom: 5px; }
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Resaltar campo con focus (Requisito Rúbrica) */
+input:focus {
+    outline: 2px solid #e74c3c;
+    background-color: #fffde7;
+}
+
+/* Convertir botón de formulario en "estilo enlace" (Requisito Rúbrica) */
+.btn-enviar {
+    background: none;
+    border: none;
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* --- DISEÑO HERO --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1000');
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
