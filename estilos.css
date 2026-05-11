@@ -1,105 +1,129 @@
-/* --- COMENTARIOS CSS (Indicador: Uso de comentarios) --- */
+/* --- ESTÁNDARES PROFESIONALES Y CENTRADO --- */
 
-/* 1. TIPOGRAFÍA Y TEXTO */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1, h2 {
-    font-variant: small-caps; /* Propiedad requerida */
-    letter-spacing: 2px;      /* Propiedad requerida */
+/* Contenedor Principal con Margen Profesional */
+.contenedor {
+    max-width: 1100px;
+    margin: 40px auto; /* Centra el bloque y da margen arriba/abajo */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
 }
 
-/* Pseudo-elemento First-Letter (Indicador: Excelente) */
+/* --- CENTRADO DE IMÁGENES Y GRID --- */
+.grid-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 30px; /* Margen entre imágenes */
+    padding: 20px 0;
+}
+
+.card {
+    flex: 0 1 300px; /* Tamaño profesional de tarjeta */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto profesional al pasar el mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    display: block;
+}
+
+/* Estilo para imágenes sueltas (como en el Index) */
+.img-promo {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: block; /* Necesario para que el margin auto funcione */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- RÚBRICA: TEXTO Y ENLACES --- */
 .texto-especial::first-letter {
-    font-size: 300%;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #e74c3c;
     float: left;
-    margin-right: 10px;
-    line-height: 1;
+    margin-right: 12px;
 }
 
-/* 2. ENLACES Y ESTADOS */
+h1, h2 {
+    font-variant: small-caps;
+    letter-spacing: 1px;
+}
+
+/* Navegación */
+header {
+    background: #1a1a1a;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
 nav a {
     text-decoration: none;
     margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-nav a:link { color: #ffffff; }
-nav a:visited { color: #bdc3c7; }
-nav a:hover { color: #e74c3c; text-decoration: underline; }
-nav a:active { color: #f1c40f; }
+nav a:link { color: #fff; }
+nav a:visited { color: #bbb; }
+nav a:hover { color: #e74c3c; }
 
-/* Enlace con icono de fondo */
+/* Botones */
 .btn-boton {
-    background: #e74c3c url('https://cdn-icons-png.flaticon.com/512/891/891462.png') no-repeat 10px center;
-    background-size: 20px;
+    background: #e74c3c;
     color: white;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
 }
 
-/* 3. LISTAS */
-.lista-premium {
-    list-style-type: none;
-    list-style-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828640.png'); /* Icono pequeño */
-    padding-left: 50px;
-}
-
-/* 4. TABLAS */
+/* Tablas Profesionales */
 .tabla-medidas {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse; /* Requisito */
-    background: white;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
 }
 
-.tabla-medidas th, td {
-    border: 1px solid #ddd;
+.tabla-medidas th, .tabla-medidas td {
     padding: 15px;
-    text-align: center;
+    border-bottom: 1px solid #eee;
 }
 
-.tabla-medidas tr:nth-child(even) { background-color: #f2f2f2; } /* Color por fila */
+.tabla-medidas tr:nth-child(even) { background: #fdfdfd; }
+.tabla-medidas caption { caption-side: bottom; font-size: 0.9em; padding: 10px; }
 
-.tabla-medidas caption {
-    caption-side: bottom; /* Requisito */
-    padding: 10px;
-    font-style: italic;
+/* Formulario Centrado */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-/* 5. FORMULARIOS */
-.campo { margin-bottom: 20px; padding: 10px; }
-
-input:focus {
-    outline: none;
-    border: 2px solid #e74c3c;
-    background-color: #fff5f5; /* Resaltar campo activo */
-}
-
-/* Botón como enlace */
-.btn-enlace-estilo {
-    background: none;
-    border: none;
-    color: #3498db;
-    text-decoration: underline;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* LAYOUT GENERAL */
-header { background: #222; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-.hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000'); background-size: cover; height: 300px; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
-.contenedor { padding: 40px; max-width: 1000px; margin: auto; background: white; }
-.img-promo { width: 100%; border-radius: 10px; margin-top: 20px; }
-.grid-productos { display: flex; gap: 20px; justify-content: center; }
-.card img { width: 250px; border-radius: 10px; }
+input:focus { border: 2px solid #e74c3c; background: #fff9f9; outline: none; }
